@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business News</title>
+    <link rel="icon" href="../Images/news_logo.png" type="image/icon type" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("https://th.bing.com/th/id/R.dc403317ac95c9ff3af60022f9ba4c33?rik=vv0y%2b66dKrZaKg&pid=ImgRaw&r=0");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      div,
+      img,
+      h3,
+      h1,
+      p,
+      button {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: black;
+        color: white;
+      }
+      a:visited {
+        color: mediumspringgreen;
+      }
+      a:focus {
+        color: bisque;
+      }
+      .news1 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: bisque;
+      }
+      .pic1 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info1 {
+        width: 66.66%;
+      }
+      .info1 h1 {
+        color: palevioletred;
+      }
+      p {
+        margin-top: 20px;
+        font-family: cursive;
+        /* font-style: oblique; */
+        /* color: white; */
+      }
+
+      .btn1 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+      h4 {
+        color: gray;
+      }
+      .news2 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: coral;
+      }
+      .pic2 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info2 {
+        width: 66.66%;
+      }
+      .info2 h1 {
+        color: darkblue;
+      }
+      .btn2 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+      .news3 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: darkseagreen;
+      }
+      .pic3 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info3 {
+        width: 66.66%;
+      }
+      .info3 h1 {
+        color: fuchsia;
+      }
+      .btn3 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+      .news4 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: lightblue;
+      }
+      .pic4 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info4 {
+        width: 66.66%;
+      }
+      .info4 h1 {
+        color: aquamarine;
+      }
+      .btn4 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+      .news5 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: thistle;
+      }
+      .pic5 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info5 {
+        width: 66.66%;
+      }
+      .info5 h1 {
+        color: yellow;
+      }
+      .btn5 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+      .news6 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: powderblue;
+      }
+      .pic6 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info6 {
+        width: 66.66%;
+      }
+      .info6 h1 {
+        color: red;
+      }
+      .btn6 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+      .news7 {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        background-color: gold;
+      }
+      .pic7 {
+        width: 33.33%;
+        margin-right: 30px;
+      }
+      .info7 {
+        width: 66.66%;
+      }
+      .info7 h1 {
+        color: slategrey;
+      }
+      .btn7 {
+        margin-top: 50px;
+        padding: 5px 10px;
+        border: 2px solid green;
+        background-color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><center>News</center></h1>
+    <div class="news1">
+      <img
+        src="https://ichef.bbci.co.uk/news/976/cpsprodpb/C12E/production/_125345494_hi076617028.jpg"
+        alt=""
+        class="pic1"
+      />
+      <div class="info1">
+        <h3>BBC News</h3>
+        <h1>Russia's new version of McDonald's unveils logo</h1>
+        <p>
+          The new branding features a circle and two lines, which are said to
+          represent a burger and two French fries. The company has not yet
+          revealed the name of the chain, although a number of options have
+          reportedly been considered. In May, McDonald's said it would pull out
+          of Russia over the Ukraine war.
+        </p>
+        <button class="btn1">
+          <a href="https://www.bbc.com/news/business-61727807"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="news2">
+      <img
+        src="https://www.usnews.com/object/image/00000181-4c27-dc51-afef-4db7c7610000/media%3A170e029a6f26417b91a2608b1727d857Virus_Outbreak_Japan_Tourism_62870.jpg?update-time=1654839964000&size=responsive970"
+        alt=""
+        class="pic2"
+      />
+      <div class="info2">
+        <h3>US News</h3>
+        <h1>Japan Eases Foreign Tourism Ban, Allows Guided Package Tours</h1>
+        <p>
+          Friday is the first day to start procedures needed for the entry and
+          arrivals are not expected until late June at the earliest, even though
+          airport immigration and quarantine offices stood by for any possible
+          arrivals. The Japan Tourism Agency says tours are being accepted from
+          98 countries and regions, including the United States, Britain, China,
+          South Korea, Thailand and Singapore, which are deemed as having low
+          infection risks.
+        </p>
+        <button class="btn2">
+          <a
+            href="https://www.usnews.com/news/business/articles/2022-06-10/japan-eases-foreign-tourism-ban-allows-guided-package-tours"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="news3">
+      <img
+        src="https://image.cnbcfm.com/api/v1/image/103548653-IMG_9951rr.jpg?v=1464110084&w=380&h=190&vtcrop=y&ffmt=webp"
+        alt=""
+        class="pic3"
+      />
+      <div class="info3">
+        <h3>CNBC News</h3>
+        <h1>
+          Adobe CEO says e-commerce is seeing price decreases, expects strong
+          future for online shopping
+        </h1>
+        <p>
+          Several categories of e-commerce are seeing price decreases and
+          support the expectation that digital shopping among consumers will
+          hold strong, Adobe chief executive Shantanu Narayen told CNBC's Jim
+          Cramer on Thursday.
+        </p>
+        <button class="btn3">
+          <a
+            href="https://www.cnbc.com/2022/06/09/adobe-ceo-says-e-commerce-is-seeing-price-decreases-expects-strong-future-for-online-shopping.html"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="news4">
+      <img
+        src="https://s4.reutersmedia.net/resources/r/?m=02&d=20220610&t=2&i=1601512740&w=200&fh=&fw=&ll=&pl=&sq=&r=LYNXMPEI5907R"
+        alt=""
+        class="pic4"
+      />
+      <div class="info4">
+        <h3>Reuters News</h3>
+        <h1>
+          Japan edges closer to intervention in yen after rare gov't, cbank
+          joint statement
+        </h1>
+        <p>
+          Japan's government and central bank said on Friday they were concerned
+          by recent sharp falls in the yen in a rare joint statement, the
+          strongest warning to date that Tokyo could intervene to support the
+          currency as it plumbs 20-year lows.
+        </p>
+        <button class="btn4">
+          <a
+            href="https://www.reuters.com/article/japan-economy-yen-statement/japan-edges-closer-to-intervention-in-yen-after-rare-govt-cbank-joint-statement-idUSKBN2NR0GW"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="news5">
+      <img
+        src="https://media-cldnry.s-nbcnews.com/image/upload/t_focal-580x290,f_auto,q_auto:best/rockcms/2022-06/220606-gas-station-jm-1528-8fdb4a.jpg"
+        alt=""
+        class="pic5"
+      />
+      <div class="info5">
+        <h3>NBC News</h3>
+        <h1>
+          The national average gas price is creeping toward $5 a gallon, and
+          there's no immediate end in sight
+        </h1>
+        <p>
+          The price of oil continues to soar with the arrival of hurricane
+          season in the U.S. and the ongoing war in Ukraine.
+        </p>
+        <button class="btn5">
+          <a
+            href="https://www.nbcnews.com/business/consumer/when-will-gas-prices-go-down-rcna32169"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="news6">
+      <img
+        src="https://s.yimg.com/ny/api/res/1.2/IfmfURw9d8D_jwf72C0.ww--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTQzNw--/https://s.yimg.com/uu/api/res/1.2/V1..XgWjuEgqtbZdJeKKKw--~B/aD00OTY7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters.com/c021702627d55b48df6736a0cd3a67af"
+        alt=""
+        class="pic6"
+      />
+      <div class="info6">
+        <h3>Yahoo News</h3>
+        <h1>
+          Analysis-Buy Now Pay Later business model faces test as rates rise
+        </h1>
+        <p>
+          Reduced consumer spending, rising interest rates and trickier credit
+          conditions spell trouble for Buy Now Pay Later lenders, raising the
+          prospect of consolidation in the sector.
+        </p>
+        <button class="btn6">
+          <a
+            href="https://news.yahoo.com/analysis-buy-now-pay-later-110438447.html"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="news7">
+      <img
+        src="https://imageio.forbes.com/specials-images/imageserve/62a2575353319ddf9e739c4b/Wells-Fargo/0x0.jpg?format=jpg&crop=1792,1008,x0,y186,safe&width=960"
+        alt=""
+        class="pic7"
+      />
+      <div class="info7">
+        <h3>Forbes News</h3>
+        <h1>
+          Feds Reportedly Launch Criminal Probe Into Wells Fargo Following
+          Allegations Of Sham Job Interviews
+        </h1>
+        <p>
+          Federal civil rights prosecutors are investigating Wells Fargo's
+          hiring practices, the New York Times reported Thursday, weeks after
+          the paper revealed some Wells Fargo managers had conducted fake
+          interviews with Black and female job applicants.
+        </p>
+        <button class="btn7">
+          <a
+            href="https://www.forbes.com/sites/joewalsh/2022/06/09/feds-reportedly-launch-criminal-probe-into-wells-fargo-following-allegations-of-sham-job-interviews/?sh=5213815054f7"
+            >Read More About</a
+          >
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

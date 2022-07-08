@@ -1,0 +1,647 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books of Zillion Mini Webpage</title>
+    <link
+      rel="icon"
+      href="{% static 'images/book_logo.png'%}"
+      type="image/icon type"
+    />
+    <style>
+      body {
+        background-color: paleturquoise;
+      }
+      body,
+      h2,
+      div,
+      ul,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .catelog-1 {
+        width: 100%;
+        height: 400px;
+        background-color: gainsboro;
+        background-image: url("https://th.bing.com/th/id/R.9d6218ef8d852989dddbad0bd63abe5f?rik=RXwgUzvBUrfK8A&riu=http%3a%2f%2fimages8.alphacoders.com%2f394%2f394169.jpg&ehk=Gwcg7pZpGnS2BfKlyFTmCvNdwmM%2b6iPJkQhHZuqohT4%3d&risl=&pid=ImgRaw&r=0");
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+      }
+      .items {
+        width: 1024px;
+        margin: 10px auto;
+        padding: 40px 0;
+      }
+      .price {
+        list-style: none;
+        width: 33.33%;
+        padding: 15px 0;
+      }
+      li {
+        margin: 20px auto;
+        color: dodgerblue;
+      }
+      .info {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px auto;
+        margin-top: 30px;
+      }
+      .h2-1 {
+        color: fuchsia;
+      }
+      .items p {
+        word-spacing: 7px;
+        font-size: 20px;
+      }
+      button {
+        background-color: none;
+      }
+      .h2-2 {
+        color: cadetblue;
+      }
+      .h2-3 {
+        color: rgb(185, 238, 24);
+      }
+      .catelog-2 {
+        margin-top: 50px;
+        width: 100%;
+        height: 400px;
+        background-color: gainsboro;
+        background-image: url("https://th.bing.com/th/id/R.8b32f01f6ceb550fc92ebd97a852fae1?rik=Xoq8mkwhv%2fr67g&pid=ImgRaw&r=0");
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+      }
+      .h2-4 {
+        color: brown;
+      }
+      .h2-5 {
+        color: darkgreen;
+      }
+      .h2-6 {
+        color: blueviolet;
+      }
+      .catelog-3 {
+        margin-top: 50px;
+        width: 100%;
+        height: 400px;
+        background-color: gainsboro;
+        background-image: url("https://th.bing.com/th/id/R.8c5e2c87dcee5516276fed855a110d1c?rik=ZnupDiaK82gtMg&pid=ImgRaw&r=0");
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+      }
+      .h2-7 {
+        color: mediumvioletred;
+      }
+      .h2-8 {
+        color: navy;
+      }
+      .h2-9 {
+        color: sienna;
+      }
+      .catelog-4 {
+        margin-top: 50px;
+        width: 100%;
+        height: 400px;
+        background-color: gainsboro;
+        background-image: url("https://th.bing.com/th/id/OIP._U_Dz7lGnRznJ1Rkm51V5AHaEo?pid=ImgDet&rs=1");
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+      }
+      .h2-10 {
+        color: cyan;
+      }
+      .h2-11 {
+        color: lightgreen;
+      }
+      .h2-12 {
+        color: orangered;
+      }
+      .catelog-5 {
+        margin-top: 50px;
+        width: 100%;
+        height: 400px;
+        background-color: gainsboro;
+        background-image: url("https://media.istockphoto.com/photos/stack-of-colorful-hardback-books-open-book-on-blue-background-picture-id506432952?k=6&m=506432952&s=170667a&w=0&h=BXwQ2ggyC-oG-Ivxv9dfyREFxCFz4n7YDlkZfYHs3xU=");
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+      }
+      .h2-13 {
+        color: deeppink;
+      }
+      .h2-14 {
+        color: gold;
+      }
+      .h2-15 {
+        color: slategrey;
+      }
+
+      .container {
+        padding: 16px;
+        background-color: white;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background-color: khaki;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus {
+        background-color: lightblue;
+        outline: none;
+      }
+      .q1 {
+        background-color: beige;
+      }
+      .q2 {
+        background-color: cadetblue;
+      }
+      textarea {
+        background-color: burlywood;
+      }
+
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      .buy {
+        background-color: #04aa6d;
+        color: darkmagenta;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+
+      .buy:hover {
+        opacity: 1;
+      }
+      .reset {
+        background-color: red;
+        color: whitesmoke;
+        cursor: pointer;
+        opacity: 0.9;
+        border-radius: 40%;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <center>Books</center>
+    </h1>
+    <div class="catelog-1">
+      <div class="items">
+        <div class="info">
+          <ul class="price">
+            <h2 class="h2-1">12 months to 1 million</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img
+                src="{% static 'images/book1.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<em
+                >Ryan Daniel Moran</em
+              >
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$14.99</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-2">Good to Great</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book2.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Jim Collins</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$15.99</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-3">Think & Grow Rich</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book3.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Napoleon Hill</em>
+            </li>
+
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$7.99</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="catelog-2">
+      <div class="items">
+        <div class="info">
+          <ul class="price">
+            <h2 class="h2-4">Your Next Five Moves</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img
+                src="{% static 'images/book4.png' %}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<em
+                >Patrich Bet-David</em
+              >
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; <button><a href="#order">$11.87</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-5">The Personal MBA</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book5.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Josh Kaufman</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="">$13.99</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-6">Starting A Business</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book6.png' %}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Ken Colwell</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$9.99</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="catelog-3">
+      <div class="items">
+        <div class="info">
+          <ul class="price">
+            <h2 class="h2-7">Profit First</h2>
+            <li>
+              &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book7.png'%} "
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp;
+              <em>Mike Michalowicz</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp;&nbsp;
+              <button><a href="#order">$11.87</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-8">The Power Of One More</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book8.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <em>Ed Mylett</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$13.99</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-9">Business Made Sample</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book9.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Donald Miller</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$9.99</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="catelog-4">
+      <div class="items">
+        <div class="info">
+          <ul class="price">
+            <h2 class="h2-10">After Steve</h2>
+            <li>
+              &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book10.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>&nbsp; &nbsp; &nbsp; &nbsp; <em>Tripp Mickie</em></li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$11.87</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-11">Wealthy, Healthy, Happy</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book11.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Alex Frost</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$13.99</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-12">Millionaire Map</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book12.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Jim Stovall</em></li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$9.99</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="catelog-5">
+      <div class="items">
+        <div class="info">
+          <ul class="price">
+            <h2 class="h2-13">Small Business</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book13.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>&nbsp; &nbsp; <em>Amanda Eliza Bertha</em></li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$11.87</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-14">Making Money on Youtube</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book14.png'%}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Leon King</em>
+            </li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$13.99</a></button>
+            </li>
+          </ul>
+          <ul class="price">
+            <h2 class="h2-15">The Intelligent Investor</h2>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img
+                src="{% static 'images/book15.png' %}"
+                alt=""
+                width="100"
+                height="140"
+              />
+            </li>
+            <li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>Benjamin Graham</em></li>
+            <li>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button><a href="#order">$9.99</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="order">
+      <fieldset>
+        <a name="order"><legend>Buy a Book</legend></a>
+        <form action="http://127.0.0.1:8000/" method="post" target="_blank">
+          {% csrf_token %}
+          <div class="container">
+            <p>Please fill in this form to buy the books.</p>
+            <hr />
+            <label for="name"><b>Your Full Name</b></label>
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              name="name"
+              id="name"
+              required
+            />
+
+            <label for="email"><b>Email</b></label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              name="email"
+              id="email"
+              required
+            />
+
+            <label for="book"><b>Book Name</b></label>
+            <input
+              type="text"
+              placeholder="Enter Book Name"
+              name="book"
+              id="book"
+              required
+            />
+            <div class="q1">
+              <p>What are/is your satisfied service for buying a book?</p>
+              <input
+                type="checkbox"
+                id="service1"
+                name="service1"
+                value="deli"
+              />
+              <label for="deli"> Free Delivery</label><br />
+              <input
+                type="checkbox"
+                id="service2"
+                name="service2"
+                value="promo"
+              />
+              <label for="promo"> Promotions</label><br />
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="dis"
+              />
+              <label for="dis">Discounts</label><br /><br />
+              <br />
+              <br />
+            </div>
+
+            <div class="q2">
+              <p>How many books will you buy?</p>
+              <input type="radio" id="choice1" name="choice1" value="deli" />
+              <label for="number"> 1-5</label><br />
+              <input type="radio" id="choice2" name="choice2" value="sec" />
+              <label for="number"> 2-10</label><br />
+              <input type="radio" id="choice3" name="choice3" value="dis" />
+              <label for="number">20-50</label><br />
+              <input type="radio" id="choice4" name="choice4" value="" />
+              <label for="number">Above 50</label><br /><br />
+              <br />
+              <br />
+            </div>
+            <div class="q3">
+              <p>Phone Number</p>
+              <select>
+                <option value="">+1 (US)</option>
+                <option value="">+33 (France)</option>
+                <option value="">+34 (Spain)</option>
+                <option value="">+44 (UK)</option>
+                <option value="">+61 (Australia)</option>
+                <option value="">+65 (Singapore)</option>
+                <option value="">+66 (Thailand)</option>
+                <option value="">+81 (Japan)</option>
+                <option value="">+82 (South Korea)</option>
+                <option value="">+86 (China)</option>
+                <option value="">+91 (India)</option>
+                <option value="">+95 (Myanmar)</option>
+              </select>
+              <label for="Phone"></label>
+              <input
+                type="tel"
+                placeholder="Enter Phone Number"
+                name="phno"
+                id="phno"
+                required
+              />
+            </div>
+            <br />
+            <br />
+            <p>If you wanna tell something, comment and give us a feedback.</p>
+            <textarea rows="10" cols="50" placeholder="Comment here"></textarea>
+
+            <hr />
+            <p>
+              We will contact in soon, but, if you wanna contact, you can
+              contact
+              <a href="mailto:info@zillion.info">us</a>.
+            </p>
+
+            <button type="submit" class="buy">Buy Now!</button>
+            <button type="reset" class="reset">Reset Order</button>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

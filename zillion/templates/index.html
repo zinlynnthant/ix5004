@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zillion Mini-Webpage</title>
+    <link
+      rel="icon"
+      href="{% static 'images/home_logo.png' %}"
+      type="image/icon type"
+    />
+    <style>
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        background-color: rgb(221, 205, 58);
+      }
+      a {
+        text-decoration: none;
+      }
+      a:link {
+        color: brown;
+      }
+      a:visited {
+        color: antiquewhite;
+      }
+      a:hover {
+        color: deepskyblue;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f5f5f5;
+      }
+
+      .header .logo {
+        font-size: 25px;
+        font-family: "Sriracha", cursive;
+        color: #000;
+        text-decoration: none;
+        margin-left: 30px;
+      }
+
+      .nav-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f5f5f5;
+        margin-right: 20px;
+      }
+
+      .nav-items a {
+        text-decoration: none;
+        color: lightslategray;
+        padding: 35px 20px;
+      }
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 520px;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url("https://th.bing.com/th/id/R.bd57c81a3d4e64418f349fbbe0f8bb02?rik=33coo9YDt2xPnQ&pid=ImgRaw&r=0");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .intro h1 {
+        font-family: sans-serif;
+        font-size: 60px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .intro p {
+        font-size: 20px;
+        color: #d1d1d1;
+        text-transform: uppercase;
+        margin: 20px 0;
+      }
+
+      .intro button {
+        background-color: #5edaf0;
+        color: #000;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+      }
+
+      .z-definitions {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 80px;
+      }
+
+      .z-definitions .defs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+      }
+
+      .z-definitions.defs i {
+        width: fit-content;
+        font-size: 50px;
+        color: #333333;
+        border-radius: 50%;
+        border: 2px solid #333333;
+        padding: 12px;
+      }
+
+      .z-definitions .defs .def-head {
+        font-size: 20px;
+        color: #333333;
+        text-transform: uppercase;
+        margin: 10px 0;
+      }
+
+      .z-definitions .defs .def-sentence {
+        font-size: 15px;
+        color: #585858;
+        margin: 10px 0;
+        text-align: justify;
+      }
+
+      .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 80px;
+        border-top: 2px solid #eeeeee;
+        background-color: darkseagreen;
+      }
+
+      .about img {
+        width: 400px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .about-text h2 {
+        font-size: 30px;
+        color: #333333;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .about-text p {
+        font-size: 15px;
+        color: #585858;
+        margin: 10px 0;
+        line-height: 30px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #302f49;
+        padding: 40px 80px;
+      }
+
+      .footer .copyright {
+        color: #fff;
+      }
+
+      .bottom-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 0;
+      }
+
+      .bottom-links .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+      }
+
+      .bottom-links .contact span {
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 10px 0;
+      }
+
+      .bottom-links .contact a {
+        text-decoration: none;
+        color: #a1a1a1;
+        padding: 10px 20px;
+      }
+      figcaption {
+        color: #eeeeee;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% block content %}
+    <header class="header">
+      <a href="#" class="logo">Zillion Mini-Business-Info Website</a>
+      <nav class="nav-items">
+        <a href="/news">News</a>
+        <a href="/articles">Articles</a>
+        <a href="/books">Books</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    {% endblock %}
+    <main>
+      <div class="intro">
+        <h1>Welcome</h1>
+        <p>This is a sub-website of Zillion.com.</p>
+        <p>
+          You can learn from this website many business techniques.
+          &#127937;&#127937;&#127937;
+        </p>
+
+        <button>
+          <a href="https://www.zillion.com">Go to Main Website</a>
+        </button>
+      </div>
+      <div class="z-definitions">
+        <div class="defs">
+          <p class="def-head">What is business?</p>
+          <p class="def-sentence">
+            A person who want to fill his needs and to get money, do something
+            which is changable values with the others via money.
+          </p>
+        </div>
+        <div class="defs">
+          <p class="def-head">Entrepreneurship</p>
+          <p class="def-sentence">
+            A risk which can give a success for us and can be done only with
+            strategies and tactics.
+          </p>
+        </div>
+        <div class="defs">
+          <p class="def-head">Success, Achievement &amp; Goal</p>
+          <p class="def-sentence">
+            Success is a best result which does not have full stop &amp; has
+            only comma. Achievement is a best result for a place, a time or an
+            effort. Goal is a final best result for the life which is defined by
+            a person.
+          </p>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about-text">
+          <h2><a name="about">Zillion</a></h2>
+          <p>
+            Zillion is a best telecomminication company of India. Zillion was
+            founded in 2021 Feb 1 at India by Mr. Zin & Mr. Smith. Now most of
+            franchises of Zillions are in many countries of Asia such as
+            Myanmar, Thailand, Turkiye and others. These website is made for
+            business knowledge by Zin Lynn Thant. If this may be a mini-website,
+            we believe that this website can support in your business skills,
+            talents and qualities. However, we can check for update of this
+            website and Mr. Zin cannot pay his attention on this website and if
+            something is needed, we cannot update immediately. &#128532;
+            &#128549; &#128557;
+          </p>
+        </div>
+        <img
+          src="https://th.bing.com/th/id/OIP._SoRC158CaKlwAoEnL1__wHaGk?pid=ImgDet&rs=1"
+          alt="me"
+        />
+      </div>
+    </main>
+    <footer class="footer">
+      <a name="contact">
+        <div class="copyright">
+          &copy; Zin Lynn Thant &commat; Zillion Telecommunication Company
+        </div>
+        <div class="bottom-links">
+          <div class="contact">
+            <span>Emails</span>
+            <a href="mailto:info@zillion.info">info@zillion.info</a>
+            <a href="mailto:zillion.info@proton.me">zillion.info@proton.me</a>
+            <a href="mailto:zillion.info@yahoo.com">zillion.info@yahoo.com</a>
+          </div>
+          <div class="contact">
+            <span>Social Links</span>
+            <a href="https://www.facebook.com"
+              ><img
+                src="https://th.bing.com/th/id/R.d2f60f233c3b3e98704a51809ff61940?rik=PlzXefnf%2fiRNDw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-KShbKMuZdC4%2fURusL83EUTI%2fAAAAAAAAABg%2ftOXD2uDo8D4%2fs1600%2ffacebook%2blogo%2b1.jpg&ehk=7XL3WLTUJ%2bFgwZOasUMDrjGvDLc3uY59KE1LDMnYILI%3d&risl=&pid=ImgRaw&r=0"
+                alt=""
+                width="30"
+                height="30"
+            /></a>
+            <figcaption>Facebook</figcaption>
+            <a href="https://www.twitter.com/explore"
+              ><img
+                src="https://yt3.ggpht.com/a/AGF-l7-reQpFnVI_3C-gqR3-tC9wlkNOe8q3gkCYQA=s900-c-k-c0xffffffff-no-rj-mo"
+                alt=""
+                width="30"
+                height="30"
+            /></a>
+            <figcaption>Twitter</figcaption>
+            <a href="https://www.youtube.com"
+              ><img
+                src="https://assets.entrepreneur.com/content/3x2/2000/20180125180430-youtube.jpeg"
+                alt=""
+                width="30"
+                height="30"
+            /></a>
+            <figcaption>Youtube</figcaption>
+          </div>
+        </div>
+      </a>
+    </footer>
+  </body>
+</html>
